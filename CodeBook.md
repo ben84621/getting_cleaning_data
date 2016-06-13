@@ -6,15 +6,6 @@
 
 Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 Human Activity Recognition Using Smartphones Dataset 
-v1
-==================================================================
-Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
-Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Universit‡ degli Studi di Genova.
-Via Opera Pia 11A, I-16145, Genoa, Italy.
-activityrecognition@smartlab.ws
-www.smartlab.ws
-==================================================================
 
 ##Overview of the data: 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
@@ -31,7 +22,15 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 - 'test/X_test.txt': Test set.
 - 'test/y_test.txt': Test labels.
 
+## Variables: 
+The original data included 561 variables containing precise measurements from gyroscopes (acceleration etc).
+In the original data, the users were split into two groups (test and train).
+In this project, we retained only the aggregate variables (mean or standard deviation). We then aggregated the data further by user and activity to return a file which shows only the most high-level information about the study.
+
 ## Steps to process:
+- Assemble the test and training sets into comprehensive data sets
+- - incorporate the user and activity to each data point (instead of separate files)
+- - add the correct headers to the new data sets
 - Merges the training and the test sets to create one data set.
 - Extracts only the measurements on the mean and standard deviation for each measurement.
 - Uses descriptive activity names to name the activities in the data set
